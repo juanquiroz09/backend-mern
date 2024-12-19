@@ -21,9 +21,9 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, 'https://client-jwwe0uw7b-juanquiroz09s-projects.vercel.app/')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // Routes
-app.use("api", postRoutes);
+app.use("/api", postRoutes);
 
 export { app };
