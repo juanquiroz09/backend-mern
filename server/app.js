@@ -1,14 +1,14 @@
 import express from "express";
 import morgan from "morgan";
 import fileUpload from "express-fileupload";
-//import path from 'path'
+import path from 'path'
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 import postRoutes from "./routes/posts.routes.js";
 
 const app = express();
-//const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(morgan("dev"));
 app.use(express.json());
@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-//app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'https://client-jwwe0uw7b-juanquiroz09s-projects.vercel.app/')));
 
 // Routes
 app.use(postRoutes);
