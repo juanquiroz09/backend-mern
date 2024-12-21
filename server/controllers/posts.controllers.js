@@ -2,11 +2,6 @@ import { deleteImage, uploadImage } from "../libs/cloudinary.js";
 import Post from "../models/Post.js";
 import fs from "fs-extra";
 
-export const getHome = async (req, res) => {
-  res.send({ message: "API Working" 
-
-  });
-}
 
 export const getPosts = async (req, res) => {
   try {
