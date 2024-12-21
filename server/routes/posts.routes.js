@@ -5,9 +5,12 @@ import {
   updatePost,
   removePost,
   getPosts,
+  getHome,
 } from "../controllers/posts.controllers.js";
 
 const router = Router();
+
+router.get("/", getHome);
 
 router.get("/posts", getPosts);
 
