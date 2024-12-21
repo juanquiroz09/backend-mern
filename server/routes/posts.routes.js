@@ -9,6 +9,11 @@ import {
 
 const router = Router();
 
+// Ruta raíz
+router.get("/", (req, res) => {
+  res.send("Bienvenido al backend en producción");
+});
+
 router.get("/posts", getPosts);
 
 router.get("/posts/:id", getPost);
