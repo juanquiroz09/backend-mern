@@ -32,11 +32,6 @@ app.use(
   })
 );
 
-// Ruta para la raíz del backend
-app.get("/", (req, res) => {
-  res.send("Bienvenido al backend en producción"); // Mensaje para verificar que el servidor está activo
-});
-
 // Rutas de la API
 app.use("/api", postRoutes);
 
