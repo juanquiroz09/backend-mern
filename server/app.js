@@ -31,9 +31,4 @@ app.use(
 // Routes
 app.use("/api", postRoutes);
 
-// Redirigir cualquier otra ruta al front-end
-app.get('*', (req, res) => {
-  res.redirect(`${FRONTEND_URL}${req.originalUrl}`);
-});
-
 export { app };
