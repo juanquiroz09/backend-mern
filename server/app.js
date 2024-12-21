@@ -9,15 +9,17 @@ import cors from 'cors';
 
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://front-mern-context-crud-atjzbe2lh-juanquiroz09s-projects.vercel.app/"
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://front-mern-context-crud-ne08s8czx-juanquiroz09s-projects.vercel.app"
 
 // Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Configuración básica para permitir todas las solicitudes
-app.use(cors());
+// Configura CORS para permitir solicitudes desde tu frontend
+app.use(cors({
+  origin: 'https://front-mern-context-crud-ne08s8czx-juanquiroz09s-projects.vercel.app'
+}));
 
 app.use(
   fileUpload({
